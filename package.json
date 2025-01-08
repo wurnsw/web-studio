@@ -2,13 +2,18 @@
   "name": "web-studio",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://wurnsw.github.io/web-studio",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build --public-url /web-studio/ src/index.html",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^1.12.3"
   },
   "devDependencies": {
